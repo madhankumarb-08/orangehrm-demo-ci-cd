@@ -8,11 +8,17 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-
 public class BaseTest
 {
     WebDriver driver;
+    ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
     public LoginPage loginPage;
+
+
+    public WebDriver getDriver()
+    {
+        return tlDriver.get();
+    }
     public WebDriver initialize() throws IOException
     {
         Properties properties = new Properties();
@@ -39,10 +45,9 @@ public class BaseTest
     public LoginPage launchApplication() throws IOException
     {
         driver = initialize();
+        tlDriver.set(driver);
         loginPage = new LoginPage(driver);
         loginPage.load_url("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         return loginPage;
     }
-
-
 }

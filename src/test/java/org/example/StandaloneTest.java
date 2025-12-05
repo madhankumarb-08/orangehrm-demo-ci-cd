@@ -1,5 +1,6 @@
 package org.example;
 import Testcomponents.BaseTest;
+import Testcomponents.Rtry;
 import org.openqa.selenium.WebElement;
 import org.pageobjectmodel.LandingPage;
 import org.pageobjectmodel.PimPage;
@@ -11,8 +12,8 @@ public class StandaloneTest extends BaseTest
     static String e_username ="maddy13";
     static String e_password = "maddy@123";
 
-    @Test
-    public void loginn() throws InterruptedException
+    @Test(retryAnalyzer = Rtry.class)
+    public void login() throws InterruptedException
     {
         String username = "Admin";
         String passowrd = "admin123";

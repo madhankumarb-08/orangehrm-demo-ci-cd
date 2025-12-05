@@ -1,0 +1,11 @@
+<suite name="orangehrm">
+    <listeners>
+        <listener class-name="Testcomponents.Listenersclass"/>
+    </listeners>
+    <test name="login">
+
+        <classes>
+            <class name="org.example.StandaloneTest"/>
+        </classes>
+    </test>
+</suite>
