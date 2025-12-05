@@ -48,9 +48,9 @@ public class PimPage extends AbstractComponents
     @FindBy(xpath = "//label[.='Employee Id']/following::input[1]")
     WebElement EmployeeId;
 
-    By addBtn = By.cssSelector("button[class$='oxd-button--secondary']");
+    private final By addBtn = By.cssSelector("button[class$='oxd-button--secondary']");
 
-    By scsmsg = By.xpath("//p[contains(@class,'oxd-text--toast-message')]");
+    private final By scsmsg = By.xpath("//p[contains(@class,'oxd-text--toast-message')]");
 
     public void addEmployeeBtn()
     {

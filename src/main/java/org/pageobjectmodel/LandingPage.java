@@ -13,12 +13,13 @@ public class LandingPage extends AbstractComponents
         PageFactory.initElements(driver,this);
     }
 
-    By pim = By.xpath("//a[contains(@class,'oxd-main-menu-item')]/span[.='PIM']");
+    private final By pim = By.xpath("//a[contains(@class,'oxd-main-menu-item')]/span[.='PIM']");
 
-    public void clickPim()
+    public PimPage clickPim()
     {
         waitForElementBY(pim);
         driver.findElement(pim).click();
+        return new PimPage(driver);
     }
 
 }

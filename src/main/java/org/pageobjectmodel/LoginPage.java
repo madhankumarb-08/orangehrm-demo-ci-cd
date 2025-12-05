@@ -26,14 +26,15 @@ public class LoginPage extends AbstractComponents
 
     public void login(String username,String passowrd) throws InterruptedException
     {
-        Thread.sleep(3000L);
+
         u_name.sendKeys(username);
         pass.sendKeys(passowrd);
     }
 
-    public void setClicklogin()
+    public LandingPage setClicklogin()
     {
         clicklogin.click();
+        return new LandingPage(driver);
     }
     public void load_url(String url)
     {

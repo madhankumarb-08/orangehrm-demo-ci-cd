@@ -1,32 +1,24 @@
 package org.example;
-import org.openqa.selenium.WebDriver;
+import Testcomponents.BaseTest;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.pageobjectmodel.LandingPage;
-import org.pageobjectmodel.LoginPage;
 import org.pageobjectmodel.PimPage;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 import utilities.random.Randomnumber;
-import java.time.Duration;
-public class StandaloneTest
+public class StandaloneTest extends BaseTest
 {
-    static String e_username ="maddy12";
+    static String e_username ="maddy13";
     static String e_password = "maddy@123";
-    public static void main(String[] args) throws InterruptedException
+
+    @Test
+    public void loginn() throws InterruptedException
     {
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        LoginPage loginPage = new LoginPage(driver);
-        String url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
-        loginPage.load_url(url);
         String username = "Admin";
         String passowrd = "admin123";
         loginPage.login(username,passowrd);
-        loginPage.setClicklogin();
-        LandingPage landingPage = new LandingPage(driver);
-        landingPage.clickPim();
-        PimPage pimPage = new PimPage(driver);
+        LandingPage landingPage = loginPage.setClicklogin();
+        PimPage pimPage = landingPage.clickPim();
         pimPage.addEmployeeBtn();
         String f_name ="Madhan";
         String m_name ="kumar";
