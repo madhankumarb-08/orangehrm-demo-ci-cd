@@ -9,9 +9,8 @@ import org.testng.annotations.Test;
 import utilities.random.Randomnumber;
 public class StandaloneTest extends BaseTest
 {
-    static String e_username ="maddy13";
-    static String e_password = "maddy@123";
-
+    static String e_username ="maddy15";
+    static String e_password = "Maddy@123";
     @Test(retryAnalyzer = Rtry.class)
     public void login() throws InterruptedException
     {
