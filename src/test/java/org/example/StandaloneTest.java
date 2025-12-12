@@ -33,4 +33,5 @@ public class StandaloneTest extends BaseTest
         Assert.assertTrue(successMsg.isDisplayed(),"Success message NOT displayed!");
         pimPage.clickAccount();
     }
+
 }
