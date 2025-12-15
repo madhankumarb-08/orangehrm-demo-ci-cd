@@ -12,31 +12,26 @@ import java.time.Duration;
 public class AbstractComponents
 {
     WebDriver driver;
-
     @FindBy(xpath = "//span[@class='oxd-userdropdown-tab']")
     WebElement account;
 
      By logout_btn = By.xpath("//ul[@class='oxd-dropdown-menu']//li//a[text()='Logout']");
-
     public AbstractComponents(WebDriver driver)
     {
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
-
     public void waitForElementBY(By by)
     {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
-
     public void presenceofWaitBY(By element)
     {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.presenceOfElementLocated(element));
     }
-
-    public void clickAccount()
+    public void setLogout_btn()
     {
         account.click();
         waitForElementBY(logout_btn);

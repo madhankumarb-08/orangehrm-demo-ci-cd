@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage extends AbstractComponents
 {
     WebDriver driver;
-
     public LoginPage(WebDriver driver)
     {
         super(driver);
@@ -40,6 +39,4 @@ public class LoginPage extends AbstractComponents
     {
         driver.get(url);
     }
-
-
 }
