@@ -14,7 +14,6 @@ public class BaseTest
     ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
     public LoginPage loginPage;
 
-
     public WebDriver getDriver()
     {
         return tlDriver.get();

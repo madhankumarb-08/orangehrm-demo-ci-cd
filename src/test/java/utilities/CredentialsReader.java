@@ -1,8 +1,6 @@
 package utilities;
-
 import java.io.FileInputStream;
 import java.util.Properties;
-
 public class CredentialsReader
 {
     private static final Properties prop;

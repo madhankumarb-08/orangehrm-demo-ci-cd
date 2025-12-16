@@ -17,7 +17,7 @@ public class LoginPage extends AbstractComponents
     @FindBy(xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']")
     WebElement clicklogin;
 
-    @FindBy(xpath ="//input[@placeholder='Username']" )
+    @FindBy(xpath ="//input[@placeholder='username']" )
     WebElement u_name;
 
     @FindBy(xpath ="//input[@name='password']" )

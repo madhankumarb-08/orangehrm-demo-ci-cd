@@ -1,9 +1,7 @@
 package utilities;
-
 import Testcomponents.BaseTest;
 import org.pageobjectmodel.LandingPage;
 import org.testng.annotations.AfterMethod;
-
 public class Reuseclass extends BaseTest
 {
     public LandingPage landingPage;
@@ -19,9 +17,9 @@ public class Reuseclass extends BaseTest
         landingPage = loginPage.setClicklogin();
     }
 
-    @AfterMethod
-    public void tearDown()
-    {
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void tearDown()
+//    {
+//        driver.quit();
+//    }
 }
