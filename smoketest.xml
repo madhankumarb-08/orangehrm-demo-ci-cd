@@ -5,9 +5,9 @@
     <test name="login">
 
         <classes>
-            <class name="org.example.admin.pim.AddEmployeeTest"/>
-            <class name="org.example.admin.pim.EditEmployeeTest"/>
-            <class name="org.example.admin.pim.DeleteEmployee"/>
+            <class name="org.example.admin.pimModule.AddEmployeeTest"/>
+            <class name="org.example.admin.pimModule.EditEmployeeTest"/>
+            <class name="org.example.admin.pimModule.DeleteEmployee"/>
         </classes>
     </test>
 </suite>

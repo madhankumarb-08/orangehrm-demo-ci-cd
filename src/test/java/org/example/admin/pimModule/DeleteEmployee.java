@@ -1,4 +1,4 @@
-package org.example.admin.pim;
+package org.example.admin.pimModule;
 
 import org.openqa.selenium.WebElement;
 import org.pageobjectmodel.PimPage;
@@ -22,6 +22,5 @@ public class DeleteEmployee extends Reuseclass
         pimPage.setDeleteButton();
         WebElement toster_message = pimPage.successMsgEditDetails();
         Assert.assertEquals(toster_message.getText(), "Successfully Deleted");
-
     }
 }

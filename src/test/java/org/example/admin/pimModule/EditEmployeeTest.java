@@ -1,4 +1,4 @@
-package org.example.admin.pim;
+package org.example.admin.pimModule;
 import org.openqa.selenium.WebElement;
 import org.pageobjectmodel.PimPage;
 import org.testng.Assert;
