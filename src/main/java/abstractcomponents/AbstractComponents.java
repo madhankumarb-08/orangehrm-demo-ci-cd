@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 public class AbstractComponents
 {
+// java is good to use 
     WebDriver driver;
     @FindBy(xpath = "//span[@class='oxd-userdropdown-tab']")
     WebElement account;
