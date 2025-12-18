@@ -11,6 +11,7 @@ import java.time.Duration;
 public class AbstractComponents
 {
 // java is good to use 
+// running in cicd
     WebDriver driver;
     @FindBy(xpath = "//span[@class='oxd-userdropdown-tab']")
     WebElement account;
